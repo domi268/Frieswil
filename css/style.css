@@ -1,0 +1,32 @@
+.fr-header {
+    background: url("../assets/header.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100vh;
+}
+
+.fr-heading {
+    position: relative;
+    left:0; right:0;
+    top:30vh; bottom:0;
+    margin: auto;
+}
+
+.fr-headingText {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 780px)
+{
+    .fr-headingText {
+        font-size: 7em;
+    }
+}
