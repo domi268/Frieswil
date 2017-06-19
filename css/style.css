@@ -7,6 +7,11 @@
     height: 100vh;
 }
 
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .fr-heading {
     position: relative;
     left:0; right:0;
@@ -14,8 +19,12 @@
     margin: auto;
 }
 
-.fr-textHeader{
-        margin-bottom: 30px;
+.fr-textHeader {
+    margin-bottom: 30px;
+}
+
+.fr-nonText {
+    text-align: center;
 }
 
 .fr-headingText {
@@ -26,14 +35,9 @@
 }
 
 .fr-section {
-    margin-top: 2em;
-    text-align: center;
+    margin-top: 3em;
 }
 
-
-.fr-slideshow {
-
-}
 .fr-slideImg {
     margin: auto;
     padding-bottom: 10px;
@@ -41,6 +45,59 @@
 
 .fr-footer{
     margin-top: 4em;
+    background-color: #212121;
+    color: #d7d7d7;
+    padding-top: 20px;
+}
+
+.fr-footerlink {
+    display: block;
+    padding-bottom: 10px;
+}
+
+.fr-mapIframe {
+    height: 300px;
+}
+
+.fr-navbar {
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    background-color: transparent;
+    border: none;
+    padding-right: 30px;
+}
+
+.navbar-toggle {
+    border: none;
+    color: white;
+}
+
+.navbar-nav {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#scrollElement {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -15px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    opacity: 1;
+    transition: all 0.2s;
+    margin-top: 0;
+}
+
+#scrollElement:hover {
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 780px)
@@ -50,10 +107,11 @@
     }
     .fr-textblock {
         font-size: 1.5em;
-        text-align: center;
     }
-    .fr-textCentered {
-        width: 50%;
-        margin: auto;
+    .fr-mapIframe {
+        height: 600px;
+    }
+    .fr-footer {
+        padding-left: 25%;
     }
 }

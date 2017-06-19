@@ -14,9 +14,60 @@
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
         <!-- Custom override styles -->
         <link href="css/style.css" rel="stylesheet">
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
-
     <body>
+        <!-- Script for smooth scrolling -->
+        <script>
+            $(document).ready(function(){
+                // Add smooth scrolling to all links
+                $("#scrollElement").on('click', function(event) {
+
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function(){
+
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                });
+            });
+        </script>
+
+        <nav class="navbar navbar-default fr-navbar">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Gewerbe&Kultur</a></li>
+                        <li><a href="#">Lage</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
         <!-- Full-Width Heaeder -->
         <div class="jumbotron fr-header">
             <div class="container">
@@ -24,56 +75,65 @@
                     <h2 class="fr-headingText" id="fr-headingH2">Wilkommen in</h2>
                     <h2 class="fr-headingText" id="fr-headingH1">Frieswil</h2>
                 </div>
+                <a id="scrollElement" href="#uebersicht"></a>
             </div>
         </div>
         <!-- Context Area -->
-        <div class="container-fluid">
+        <div class="container-fluid" id="uebersicht">
             <div class="col-xs-12 fr-section fr-textblock">
-                <h1 class="fr-textHeader">Übersicht</h1>
-                <p class="fr-textCentered">
-                    Frieswil ist ein kleines Dorf in der Gemeinde Seedorf mit rund 230 Einwohner.<br/> Im Unterschied zu den anderen Dorfschaften der Gemeinde, liegt Frieswil "änetem Bärg", am südwestlichen Fuss des Frienisbergs.<br/> Bei guten Sichtverhältnissen eröffnet sich ein grandioses Panorama von den Berner- über die Fribourger-Alpen bis hin zur Jurakette und dem Drei-Seen-Land.
-                </p>
+                <div class="col-md-9 col-xs-12">
+                    <h1 class="fr-textHeader">Übersicht</h1>
+                    <p class="fr-textCentered">
+                        Frieswil ist ein kleines Dorf in der Gemeinde Seedorf mit rund 230 Einwohner.<br/> Im Unterschied zu den anderen Dorfschaften der Gemeinde, liegt Frieswil "änetem Bärg", am südwestlichen Fuss des Frienisbergs.<br/> Bei guten Sichtverhältnissen eröffnet sich ein grandioses Panorama von den Berner- über die Fribourger-Alpen bis hin zur Jurakette und dem Drei-Seen-Land.
+                    </p>
+                </div>
+                <div class="col-md-3 col-xs-12S">
+                    <img src="assets/fr_v_small.jpg" class="img-responsive" alt="Frieswil Vorne">
+                </div>
             </div>
 
-            <div class="col-xs-12 fr-section fr-slideshow">
+            <div class="col-xs-12 fr-section fr-nonText">
                 <h1 class="fr-textHeader">Eindrücke</h1>
                 <br/>
-                <div class="col-md-3 col-xs-6">
+                <div class="col-md-3 col-xs-12">
                     <img src="assets/eiersuchen.jpg" class="img-responsive fr-slideImg" alt="Responsive image">
                 </div>
-                <div class="col-md-3 col-xs-6">
+                <div class="col-md-3 col-xs-12">
                     <img src="assets/frieswil.jpg" class="img-responsive fr-slideImg" alt="Responsive image">
                 </div>
-                <div class="col-md-3 col-xs-6">
+                <div class="col-md-3 col-xs-12">
                     <img src="assets/aussicht.jpg" class="img-responsive fr-slideImg" alt="Responsive image">
                 </div>
-                <div class="col-md-3 col-xs-6">
+                <div class="col-md-3 col-xs-12">
                     <img src="assets/berge.jpg" class="img-responsive fr-slideImg" alt="Responsive image">
                 </div>
             </div>
 
             <div class="col-xs-12 fr-section fr-textblock">
-                <h1 class="fr-textHeader">Leben in Frieswil</h1>
-                <p class="fr-textCentered">
-                    Nebst Landwirtschaft, Gewerbe- und Dienstleistungsbetrieben und einem Dorfladen, sorgen zahlreiche Vereine für das vielfältige Dorfbild und das kulturelle Angebot.
-                </p>
-                <p class="fr-textCentered">
-                    Liebe Besucherinnen und Besucher, geniessen Sie unsere Seite und informieren Sie sich über unser Dorf und die nähere Umgebung.
-                    Diese Seite wird vom Dorfverein unterhalten und in loser Reihenfolge aktualisiert.
-                </p>
-                <p class="fr-textCentered">
-                    Den Dorfverein können Sie über diese Seite kontaktieren via Webmail oder über die Postanschrift des Präsidenten.
-                    Für Fragen zur Seite betreffend:
-                    Inhalt, Mailaccount oder Anderes, wenden Sie sich an den Webmaster .
-
-                </p>
+                <div class="col-md-3 col-xs-12S">
+                    <img src="assets/fr_bae_s.jpg" class="img-responsive" alt="Frieswil Vorne">
+                </div>
+                <div class="col-md-9 col-xs-12">
+                    <h1 class="fr-textHeader">Leben in Frieswil</h1>
+                    <p class="fr-textCentered">
+                        Nebst Landwirtschaft, Gewerbe- und Dienstleistungsbetrieben und einem Dorfladen, sorgen zahlreiche Vereine für das vielfältige Dorfbild und das kulturelle Angebot.
+                    </p>
+                    <p class="fr-textCentered">
+                        Liebe Besucherinnen und Besucher, geniessen Sie unsere Seite und informieren Sie sich über unser Dorf und die nähere Umgebung.
+                        Diese Seite wird vom Dorfverein unterhalten und in loser Reihenfolge aktualisiert.
+                    </p>
+                    <p class="fr-textCentered">
+                        Den Dorfverein können Sie über diese Seite kontaktieren via Webmail oder über die Postanschrift des Präsidenten.
+                        Für Fragen zur Seite betreffend:
+                        Inhalt, Mailaccount oder Anderes, wenden Sie sich an den Webmaster .
+                    </p>
+                </div>
             </div>
 
-            <div class="col-xs-12 fr-section fr-map">
+            <div class="col-xs-12 fr-section fr-map fr-nonText">
                 <h1 class="fr-textHeader">Frieswil auf der Karte</h1>
                 <iframe
-                class="col-xs-12"
-                height="600px"
+                class="col-xs-12 fr-mapIframe"
                 frameborder="0" style="border:0"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2721.3097845433176!2d7.283265951978173!3d46.994889979046526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e161c6007fd41%3A0xf6e58466d593b465!2s3035+Frieswil!5e0!3m2!1sde!2sch!4v1497648206108">
                 </iframe>
@@ -81,10 +141,23 @@
 
             <div class="col-xs-12 fr-section fr-footer">
                 <div class="col-xs-12 col-md-6">
-                    <p class="fr-textCentered">Dorf und Gemeinde</p>
+                    <h4 class="fr-textCentered">Dorf und Gemeinde</h4>
+                    <div class="col-xs-6">
+                        <a class="fr-footerlink" href="https://de.wikipedia.org/wiki/Frieswil">Frieswil-Wikipedia</a>
+                        <a class="fr-footerlink" href="http://www.seedorf.ch/de/index.php">Gemeinde Seedorf</a>
+                        <a class="fr-footerlink" href="http://www.radelfingen.ch/">Gemeinde Radelfingen</a>
+                    </div>
+                    <div class="col-xs-6">
+                        <a class="fr-footerlink" href="http://www.wohlen-be.ch/de/index.php">Gemeinde Wohlen</a>
+                        <a class="fr-footerlink" href="http://www.aarberg.ch/de/index.php">Gemeinde Aarberg</a>
+                    </div>
+
                 </div>
                 <div class="col-xs-12 col-md-6">
-                    <p class="fr-textCentered">Bildung und Schule</p>
+                    <h4 class="fr-textCentered">Schule</h4>
+                    <div class="col-xs-6">
+                        <a class="fr-footerlink" href="https://www.schulematzwil.ch/">Schule Matzwil</a>
+                    </div>
                 </div>
             </div>
 
