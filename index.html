@@ -21,9 +21,9 @@
         <!-- Script for smooth scrolling -->
         <script>
             $(document).ready(function(){
+                // Function: Smooth-Scroll
                 // Add smooth scrolling to all links
                 $("#scrollElement").on('click', function(event) {
-
                     // Make sure this.hash has a value before overriding default behavior
                     if (this.hash !== "") {
                         // Prevent default anchor click behavior
@@ -42,6 +42,18 @@
                             window.location.hash = hash;
                         });
                     } // End if
+                });
+
+                // Function: Prevent Iframe Scroll
+                // you want to enable the pointer events only on click;
+                $('#fr-map').addClass('scrolloff'); // set the pointer events to none on doc ready
+                $('#fr-mapSection').on('click', function () {
+                  $('#fr-map').removeClass('scrolloff'); // set the pointer events true on click
+                });
+
+                // you want to disable pointer events when the mouse leave the canvas area;
+                $("#fr-map").mouseleave(function () {
+                  $('#fr-map').addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
                 });
             });
         </script>
@@ -84,7 +96,7 @@
                 <div class="col-md-9 col-xs-12">
                     <h1 class="fr-textHeader">Übersicht</h1>
                     <p class="fr-textCentered">
-                        Frieswil ist ein kleines Dorf in der Gemeinde Seedorf mit rund 230 Einwohner.<br/> Im Unterschied zu den anderen Dorfschaften der Gemeinde, liegt Frieswil "änetem Bärg", am südwestlichen Fuss des Frienisbergs.<br/> Bei guten Sichtverhältnissen eröffnet sich ein grandioses Panorama von den Berner- über die Fribourger-Alpen bis hin zur Jurakette und dem Drei-Seen-Land.
+                        Frieswil ist ein kleines Dorf in der Gemeinde Seedorf mit rund 230 Einwohner.<br/>Im Unterschied zu den anderen Dorfschaften der Gemeinde, liegt Frieswil "änetem Bärg", am südwestlichen Fuss des Frienisbergs.<br/>Bei guten Sichtverhältnissen eröffnet sich ein grandioses Panorama von den Berner- über die Fribourger-Alpen bis hin zur Jurakette und dem Drei-Seen-Land.
                     </p>
                 </div>
                 <div class="col-md-3 col-xs-12S">
@@ -130,9 +142,10 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 fr-section fr-map fr-nonText">
+            <div class="col-xs-12 fr-section fr-map fr-nonText" id="fr-mapSection">
                 <h1 class="fr-textHeader">Frieswil auf der Karte</h1>
                 <iframe
+                id="fr-map"
                 class="col-xs-12 fr-mapIframe"
                 frameborder="0" style="border:0"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2721.3097845433176!2d7.283265951978173!3d46.994889979046526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e161c6007fd41%3A0xf6e58466d593b465!2s3035+Frieswil!5e0!3m2!1sde!2sch!4v1497648206108">
@@ -140,7 +153,7 @@
             </div>
 
             <div class="col-xs-12 fr-section fr-footer">
-                <div class="col-xs-12 col-md-6">
+                <div class="col-xs-12 col-md-4">
                     <h4 class="fr-textCentered">Dorf und Gemeinde</h4>
                     <div class="col-xs-6">
                         <a class="fr-footerlink" href="https://de.wikipedia.org/wiki/Frieswil">Frieswil-Wikipedia</a>
@@ -153,10 +166,16 @@
                     </div>
 
                 </div>
-                <div class="col-xs-12 col-md-6">
+                <div class="col-xs-12 col-md-4">
                     <h4 class="fr-textCentered">Schule</h4>
                     <div class="col-xs-6">
                         <a class="fr-footerlink" href="https://www.schulematzwil.ch/">Schule Matzwil</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <h4 class="fr-textCentered">Kontakt</h4>
+                    <div class="col-xs-6">
+                        <a class="fr-footerlink" href="mailto::dominikalbrecht9@gmail.com">Kontakt Webmaster</a>
                     </div>
                 </div>
             </div>

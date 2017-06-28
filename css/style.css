@@ -44,7 +44,6 @@
 }
 
 .fr-footer{
-    margin-top: 4em;
     background-color: #212121;
     color: #d7d7d7;
     padding-top: 20px;
@@ -76,6 +75,11 @@
 .navbar-nav {
     font-size: 1.2em;
     font-weight: bold;
+}
+
+/* Iframe auto-scroll fix */
+.scrolloff {
+        pointer-events: none;
 }
 
 #scrollElement {
@@ -110,8 +114,5 @@
     }
     .fr-mapIframe {
         height: 600px;
-    }
-    .fr-footer {
-        padding-left: 25%;
     }
 }
