@@ -21,9 +21,14 @@
 
 .fr-textHeader {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .fr-nonText {
+    text-align: center;
+}
+
+.fr-textCentered {
     text-align: center;
 }
 
@@ -77,6 +82,12 @@
     font-weight: bold;
 }
 
+.fr-navSubpage {
+    margin-bottom: 0px;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
 /* Iframe auto-scroll fix */
 .scrolloff {
         pointer-events: none;
@@ -114,5 +125,11 @@
     }
     .fr-mapIframe {
         height: 600px;
+    }
+    .fr-textCentered {
+      text-align: left;
+    }
+    .fr-textHeader {
+      text-align: left;
     }
 }
