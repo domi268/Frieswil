@@ -69,12 +69,13 @@
                         <span class="icon-bar"></span>
                     </button>
                 </div>
+                <!-- TODO: OPTIMIZE MINIMIZED NAVBAR -->
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Gewerbe&Kultur</a></li>
-                        <li><a href="#">Lage</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="kultur.html">Gewerbe&Kultur</a></li>
+                        <li><a href="lage.html">Lage</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -91,7 +92,7 @@
             </div>
         </div>
         <!-- Context Area -->
-        <div class="container-fluid" id="uebersicht">
+        <div class="container-fluid" id="content">
             <div class="col-xs-12 fr-section fr-textblock">
                 <div class="col-md-9 col-xs-12">
                     <h1 class="fr-textHeader">Übersicht</h1>
@@ -99,13 +100,13 @@
                         Frieswil ist ein kleines Dorf in der Gemeinde Seedorf mit rund 230 Einwohner.<br/>Im Unterschied zu den anderen Dorfschaften der Gemeinde, liegt Frieswil "änetem Bärg", am südwestlichen Fuss des Frienisbergs.<br/>Bei guten Sichtverhältnissen eröffnet sich ein grandioses Panorama von den Berner- über die Fribourger-Alpen bis hin zur Jurakette und dem Drei-Seen-Land.
                     </p>
                 </div>
-                <div class="col-md-3 col-xs-12S">
+                <div class="col-md-3 col-xs-12">
                     <img src="assets/fr_v_small.jpg" class="img-responsive hidden-xs" alt="Frieswil Vorne">
                 </div>
             </div>
 
-            <div class="col-xs-12 fr-section fr-nonText">
-                <h1 class="fr-textHeader">Eindrücke</h1>
+            <div class="col-xs-12 fr-section">
+                <h1 class="fr-textHeader fr-nonText">Eindrücke</h1>
                 <br/>
                 <div class="col-md-3 col-xs-12">
                     <img src="assets/eiersuchen.jpg" class="img-responsive fr-slideImg" alt="Responsive image">
@@ -123,6 +124,7 @@
 
             <div class="col-xs-12 fr-section fr-textblock">
                 <div class="col-md-3 col-xs-12S">
+                    <!-- TODO: OPTIMIZE IMAGE -->
                     <img src="assets/fr_bae_s.jpg" class="img-responsive hidden-xs" alt="Frieswil Vorne">
                 </div>
                 <div class="col-md-9 col-xs-12">
@@ -142,8 +144,8 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 fr-section fr-map fr-nonText" id="fr-mapSection">
-                <h1 class="fr-textHeader">Frieswil auf der Karte</h1>
+            <div class="col-xs-12 fr-section fr-map" id="fr-mapSection">
+                <h1 class="fr-textHeader fr-nonText">Frieswil auf der Karte</h1>
                 <iframe
                 id="fr-map"
                 class="col-xs-12 fr-mapIframe"
