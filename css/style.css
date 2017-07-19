@@ -8,7 +8,6 @@ body {
 }
 
 .fr-header {
-    background: url("../assets/header.jpg") no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -16,9 +15,31 @@ body {
     height: 100vh;
 }
 
+.fr-containerHeader {
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fr-headerImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
 .container-fluid {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: 3em;
 }
 
 .fr-heading {
@@ -40,11 +61,11 @@ body {
 .fr-textCentered {
     text-align: center;
     font-weight: 300;
+    font-size: 1.25em
 }
 
 .fr-headingText {
     text-align: center;
-    /* FRANZ VORTRAG */
     color: white;
     font-weight: bold;
     font-size: 3em;
@@ -55,14 +76,21 @@ body {
 }
 
 .fr-slideImg {
-    margin: auto;
-    padding-bottom: 10px;
+    display: none;
+    max-width: 500px;
+}
+.fr-slide {
+    display: none;
 }
 
 .fr-footer{
     background-color: #212121;
     color: #d7d7d7;
     padding-top: 20px;
+}
+
+.fr-footerlink {
+    font-size: 1.25;
 }
 
 .fr-footerlink {
@@ -74,50 +102,10 @@ body {
     height: 300px;
 }
 
-.fr-navbar {
-    position: absolute;
-    width: 100%;
-    top: 20px;
-    background-color: transparent;
-    border: none;
-    padding-right: 30px;
-}
-
-.navbar-toggle {
-    border: none;
-    color: white;
-}
-
-.navbar-nav {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.fr-navSubpage {
-    margin-bottom: 0px;
-    padding-left: 30px;
-    padding-right: 20px;
-}
-
 /* Iframe auto-scroll fix */
 .scrolloff {
         pointer-events: none;
 }
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -.05rem;
-}
-
 
 #scrollElement {
     display: block;
@@ -135,6 +123,20 @@ body {
     margin-top: 0;
 }
 
+.fr-navToggle {
+    display: block;
+    color: white;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size:50px;
+    cursor:pointer;
+}
+
+.fr-navToggle:hover {
+    color: #35373a;
+}
+
 #scrollElement:hover {
     border: solid #000;
     border-width: 0 3px 3px 0;
@@ -148,6 +150,49 @@ body {
 .fr-slideContainer {
 	overflow: auto;
 	white-space: nowrap;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.2s;
+    padding-top: 60px;
+    text-align:center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 50px;
+    margin: auto;
+    font-weight: bold;
+    color: #35373a;
+    display: block;
+    transition: 0.1s;
+
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 /* Large devices (tablets, 768px and up) */
 @media (min-width: 992px)
@@ -170,7 +215,7 @@ body {
 	#fr-imgStack {
 	display: inline;
 	}
-	#fr-imgSlide {
+	.fr-îmgSlide {
 	display: none;
 	}
 }
