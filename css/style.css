@@ -1,3 +1,7 @@
+body {
+    color: #5a5a5a;
+}
+
 #uebersicht {
     margin-left: 20px;
     margin-right: 20px;
@@ -35,6 +39,7 @@
 
 .fr-textCentered {
     text-align: center;
+    font-weight: 300;
 }
 
 .fr-headingText {
@@ -98,6 +103,21 @@
 .scrolloff {
         pointer-events: none;
 }
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
 
 #scrollElement {
     display: block;
